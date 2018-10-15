@@ -1,11 +1,11 @@
 'use strict'
 
-/* jim's actual solution
+/* daylans' solution
 window.addEventListener("DOMContentLoaded",function(){
     //reference variables
     var imgObjectList = [];  
     var form = document.querySelector('form');
-    var newTag = document.querySelector('form input:first-of-type');
+    var newTag = document.querySelector('form input:first-of-type'); //forms element.id
     var tags = document.querySelector('.tags');
     var largeImg = document.querySelector('.editor img'); 
     largeImg.dataset.id = "0"; 
@@ -72,12 +72,14 @@ window.addEventListener("DOMContentLoaded",function(){
         Array.from()
 */
 
+/*
 window.addEventListener('load',function(e)
 {
     const theNodes = Array.from(document.querySelectorAll(".thumbnails img"));
 
-    const dataObj = theNodes.map(function(value,index){
+    const dataArray = theNodes.map(function(value,index){
         value.addEventListener("click",onUpdateGalleryDisplay);
+        value.setAttribute("data-index", index);
 
         var tempObj = {
             id: index,
@@ -88,8 +90,43 @@ window.addEventListener('load',function(e)
         return tempObj;
     })
 
+    // update image display
     function onUpdateGalleryDisplay(e)
     {
-        console.log(e);
+        
     }
+
+    // submit action
+    function onEditTags(e)
+    {
+        validateTags(e.elements.tag)
+    }
+
+    function validateTags(data)
+    {
+        if(data.value == "")
+        {
+            // display error
+            error.textContent = "Please enter a tag";
+        }
+        else if(data.value.includes(" "))
+        {
+            error.textContent = "You can't have spaces"
+        }
+        else
+        {
+            // tag update
+            data.tags = data.value
+        }
+    }
+})*/
+
+// loops JavaScript
+
+var dataArray = ["one", "two", "three", "four"];
+
+dataArray.forEach(function(value,index){
+    //doesnt return anything
+    var containerElement = document.createElement('p');
+    containerElement.innerHTML = value;
 })
