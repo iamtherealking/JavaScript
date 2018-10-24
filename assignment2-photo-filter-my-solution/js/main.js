@@ -3,8 +3,6 @@
 window.addEventListener("load", function(e){
     const nodeThumbnail = document.querySelectorAll(".thumb-display");
     const inputTags = document.querySelector(".frm-control")
-    
-    let emptyarray = []
 
     nodeThumbnail.forEach(function(elm,index){
         let tempThumbnailObj ={
@@ -12,27 +10,29 @@ window.addEventListener("load", function(e){
             tags: elm.querySelector(".tags").innerHTML.replace(/[#]/g, "").split(" ")
         }
         elm.dataset.id = tempThumbnailObj.id;
+        elm.dataset.tags = tempThumbnailObj.tags;
 
-        tempThumbnailObj.tags.forEach(function(val){
-            let wordTagArray = val.split("");
+
+        inputTags.addEventListener("input", function(e){
+            let tempWord = "";
             let i = 0;
-            let tempWord = wordTagArray[i];
-
-            inputTags.addEventListener("input",function(e){
+            tempThumbnailObj.tags.forEach(function(val){
+                let wordTagArray = val.split("");
+                tempWord = wordTagArray[i];
                 if(tempWord == inputTags.value)
                 {
-                    onDisplay(elm.dataset.id)
-                }
-                else
-                {
-
+                    nodeThumbnail[index].classList.toggle("hidden")
                 }
             })
         })
-       emptyarray.push(elm.dataset.id);
     })
 
-    
+
+
+    function onSetDisplay(num, ind)
+    {
+        console.log(num, ind)
+    }
 
 
 })
