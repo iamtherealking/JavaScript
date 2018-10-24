@@ -4,6 +4,7 @@ window.addEventListener("load", function(e){
     const nodeThumbnail = document.querySelectorAll(".thumb-display");
     const inputTags = document.querySelector(".frm-control")
 
+    /*
     nodeThumbnail.forEach(function(elm,index){
         let tempThumbnailObj ={
             id: index,
@@ -26,13 +27,7 @@ window.addEventListener("load", function(e){
             })
         })
     })
-
-
-
-    function onSetDisplay(num, ind)
-    {
-        console.log(num, ind)
-    }
+    */
 
 
 })
