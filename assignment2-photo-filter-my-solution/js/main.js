@@ -8,15 +8,9 @@ window.addEventListener("load", function(e){
         let tagsArray = elm.querySelector(".tags").innerHTML.replace(/[#]/g, "").split(" ")
 
         inputTags.addEventListener("input", function(e){
-            
+            //filter
             tagsArray.forEach(function(val){
-                let wordTagArray = val.split("");
-                let i = 0;
-                tempWord = wordTagArray[i];
-                if(tempWord == inputTags.value)
-                {
-                   console.log("oof")
-                }
+                
             })
         })
     })
