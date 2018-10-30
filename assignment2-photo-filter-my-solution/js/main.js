@@ -14,7 +14,7 @@ window.addEventListener("load", function(e){
 
             nodeThumbnail[index].classList.add("hidden");
             let tags = tagsArray.filter(function(value,ind){
-                if(inputTags.value == value.substring(0,inputlength))
+                if(inputTags.value.toLowerCase() == value.substring(0,inputlength))
                 {
                     nodeThumbnail[index].classList.remove("hidden")
                 }
@@ -28,13 +28,16 @@ window.addEventListener("load", function(e){
                 resetClick.addEventListener("click",function(e){
                     inputTags.value = ""
                     nodeThumbnail[index].classList.remove("hidden")
-
-                    if(inputTags.value == "")
+                    
+                    if(inputTags.value === "")
                     {
-                        document.querySelector(".reset").classList.add("hidden");
+                        resetClick.classList.add("hidden");
                     }
                 })
-
+            }
+            if(inputTags.value === "")
+            {
+                document.querySelector(".reset").classList.add("hidden");
             }
         })
     })
