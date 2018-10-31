@@ -1,0 +1,77 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 100%;
+}
+img {
+  width: 100%;
+}
+/* remove the height */
+.component {
+  padding-bottom 4rem;
+}
+.products-container {
+  background: rgb(253, 253, 253);
+  max-width: 1200px;
+  margin: 0 auto;
+  color: rgb(164, 164, 164);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.products-header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(74, 74, 74);
+}
+
+.product-item {
+  margin: 0.55rem;
+  max-width: 450px;
+  padding-bottom: 1rem;
+}
+
+.card {
+  border-top: 5px solid tomato;
+  box-shadow: 2px 2px 8px 1px rgb(216, 215, 218);
+  padding: 0.5rem;
+}
+.card-title {
+  color: rgb(105, 105, 105);
+}
+.card-thumbnail {
+  border: 1px solid rgb(154, 154, 154);
+  padding: 2px;
+}
+
+@media (min-width: 490px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.25rem;
+    padding:1rem;
+  }
+
+  .products-header {
+    padding:1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+  }
+}
+
+@media (min-width: 850px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:0.75rem;
+  }
+  .products-header {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(74, 74, 74);
+  }
+}

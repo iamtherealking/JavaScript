@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebFlow</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+    <main>
+        <div class="component">
+            <header class="products-header">
+                <h2>Products In Stock</h2>
+            </header>
+            <div class="products-container">
+            </div>
+        </div>
+
+        <!--
+            Template tag isn't rendered to the DOM
+            it's a fragment of the DOM use
+            querySelector along with the content property
+        -->
+        <template>
+            <div class="card product-item">
+                <h3 class="card-title"></h3>
+                <div>
+                    <img class="card-thumbnail" src="" alt="">
+                </div>
+                <p class="card-details"></p>
+            </div>
+        </template>
+     
+    </main>
+    <script src="js/several.js"></script>
+    <script src="js/single.js"></script>
+    <script src="js/main.js"></script>
+ 
+
+</body>
+
+</html>
