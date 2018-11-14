@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>webflow</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="50px" height="50px" viewBox="0 0  520 338" xml:space="preserve">
+          <path d="M66.1,187C95.2,127.5,124,68.3,153.2,8.6c31.6,61.5,63,122.6,94.2,183.5c0.4,0,0.7-0.1,1.1-0.1
+                c-0.6-60.4-1.2-120.9-1.8-182.2c25.2,0.7,43.5,11.3,57.6,31.1c14.2,19.9,12.4,42.3,12.6,66.4c4.6-4.7,8.3-8.4,11.8-12.2
+                c19.7-21,39.4-42.1,59.2-63c1.6-1.6,4.1-3.2,6.2-3.2c30.4-0.5,60.8-0.7,91.3-1.1c0.5,0,1,0.1,2.6,0.5
+                c-41.7,43.9-82.9,87.4-124.5,131.1c48.5,49,96.7,97.7,145.2,146.7c-11.4,12-24.9,19.1-40.7,20.9c-22,2.7-41.1-4.3-56.8-20.1
+                c-29.4-29.7-58.7-59.5-88.2-89.1c-1.2-1.2-2.3-2.7-4.7-3.5c0.4,38.1,0.7,76,1.2,114.7c-8.8,0.1-16.7,0.5-24.7,0.1
+                c-10.9-0.4-22.1-0.1-32.8-2.3c-19.7-3.9-34.3-15-43.5-33.4C198,252.6,177,212,156.2,171.4c-0.4-0.6-0.7-1.2-1.6-2.4
+                c-14,28.8-27.8,57.2-42.2,86.7C107.4,225.1,92,202.9,66.1,187z"
+            fill="#ff5a5f" />
+          <path d="M52.4,321.9c-21.3,0.2-40.9-16.9-41.1-39.5c-0.1-22.9,17.4-41.1,39.9-41.3c22.6-0.2,40.9,17.5,41.1,40.1
+                  C92.5,303.5,74.7,321.7,52.4,321.9z"
+            fill="#ff5a5f" />
+        </svg>
+
+        <strong class="mar">grey matters</strong>
+      </a>
+
+    </div>
+  </div>
+  <!-- jumbotron -->
+  <section class="jumbotron jumbotron-fluid ">
+    <div class=" container-fluid text-center">
+      <h1>Using Template Literals</h1>
+      <p class="lead   offset-md-2 text-muted col-md-8  ">
+        When building content and adding it to the DOM you have serveral choicses. You can choose to write markup
+        with
+        javascript, you can use the<code> <template></template></code> element or you can use template literals.
+      </p>
+      <form id="booking-form" class="offset-4 col-8 text-left">
+        <div class="form-group row  ">
+          <label for="guests" class="col-md-1 col-form-label">guests</label>
+          <div class="col-sm-2">
+            <input id="guests" style="width:175px;" type="number" class="form-control" value="2" min="1" max="6">
+          </div>
+        </div>
+        <div class="form-group row ">
+          <label for="inputPassword" class="col-md-1 col-form-label">room</label>
+          <div class="col-sm-2">
+            <select id="room-type" style="width:175px;" class="form-control" id="room-type">
+              <option selected>garden view</option>
+              <option>ocean view</option>
+              <option>mountain view</option>
+              <option>pool view</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="form-group row">
+          <label class="col-1 col-form-label form-control-sm" for="check-in">check in</label>
+          <div class="col-md-3">
+            <input id="check-in" style="width:175px;" type="date" class="form-control" value="2018-11-10" min="2018-01-01"
+              max="2018-12-31">
+          </div>
+        </div>
+        <div class="form-group row">
+
+          <label class="col-sm-1 col-form-label form-control-sm" for="check-out">check out</label>
+          <div class="col-3">
+            <input id="check-out" style="width:175px;" type="date" class="form-control" value="2018-11-12" min="2018-01-01"
+              max="2018-12-31">
+          </div>
+        </div>
+
+
+        <div class="form-group row">
+          <label class="col-sm-1 col-form-label form-control-sm" for="submit"></label>
+          <div class="col-2">
+            <input id="submit" type="submit" style="width:175px; margin:0" class="btn btn-danger offset-4" value="Book Your Vacation" />
+
+          </div>
+        </div>
+
+
+
+      </form>
+    </div>
+  </section>
+  <table class="table table-striped offset-3
+   col-5">
+    <thead>
+      <tr class="credit">
+        <th>#</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="debit">
+        <td>1</td>
+        <td>Lorem</td>
+        <td>ipsum</td>
+        <td>dolor</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>amet</td>
+        <td>consectetur</td>
+        <td>adipiscing</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script type="module" src="js/data/room-prices.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
