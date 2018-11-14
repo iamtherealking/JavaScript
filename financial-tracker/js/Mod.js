@@ -8,7 +8,7 @@ export const template = function(desc,type,money){
 		<td class="tools">
 			<i class="delete fa fa-trash-o"></i>
 		</td>
-	</tr>
+	 </tr>
     `
     )
  }

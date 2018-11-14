@@ -37,8 +37,15 @@ window.addEventListener("load", function(e){
     {
         transactions.forEach(function(item,index){
             let transaction = template(item.description, item.type, item.currency);
-            transactionBody.appendChild(transaction);
+            
+            console.log(transaction)
         })
     }
+    documennt.innerHTML = (addTransaction({1:1, 2:3}))
+    
+    function addTransaction(theObj){
+        const jimo = '${theobj.1}
+        '
 
-})
+        return jimo
+    }
