@@ -1,52 +1,44 @@
-// Enter JavaScript for the exercise here...
+// enter JavaScript for the exercise here...
+'use strict'
+import {template} from './Mod.js'
+
 window.addEventListener("load", function(e){
-    //reference to the tbody: 
+    // references
     const transactionBody = document.querySelector(".transactions tbody")
-    
-    //create template first:
-    createTemplate()
 
-    function createTemplate()
-    {
-        let rowElm = document.createElement("tr")
-        let col = rowElm.insertCell(0)
+    const submitButton = document.querySelector(".frm-group input[type='submit']")
 
-        col = rowElm.insertCell(1)
-
-        col = rowElm.insertCell(2)
-        col.classList.add("amount")
-        col = rowElm.insertCell(3)
-        col.classList.add("tools")
-         
-        let colTool = document.createElement("i")
-        colTool.setAttribute("class", "delete fa fa-trash-o")
-        col.appendChild(colTool)
-
-        transactionBody.appendChild(rowElm)
-    }
-
-    const addButton = document.querySelector(".frm-group input[type='submit']")
     const description = document.querySelector(".frm-group input[type='text']")
     const transactionType = document.querySelector(".frm-group select")
-    const currency = document.querySelector(".frm-group input[type='number']")
+    const currency = document.querySelector(".frm-group input[type='number']");
 
     let transactions = [];
 
-    addButton.addEventListener("click", function(e){
+    submitButton.addEventListener("click", function(e){
         e.preventDefault();
 
-        let transactionData = {
-            description: description.value,
-            type: transactionType.value,
-            currency: currency.value
+        if(transactionType.value === ""){
+            document.querySelector(".error").innerHTML = "Please select a type";
         }
-        
-        transactions.push(transactionData)
+        else{
+            let transactionData = {
+                description: description.value,
+                type: transactionType.value,
+                currency: Number(currency.value)
+            }
 
-        console.log(transactions)
+            transactions.push(transactionData);
+            onSetDisplay();
+        }
         
     })
 
-    console.log(transactionBody)
+    function onSetDisplay()
+    {
+        transactions.forEach(function(item,index){
+            let transaction = template(item.description, item.type, item.currency);
+            transactionBody.appendChild(transaction);
+        })
+    }
 
 })
