@@ -32,7 +32,7 @@ window.addEventListener("load", function(e){
         idleTime += 1
         if(idleTime > 1)
         {
-            alert("you're gay")
+            alert("Timeout")
             window.location.reload(true);
         }
     }

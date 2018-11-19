@@ -1,0 +1,72 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+nav{
+  height: 2.5rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2)
+}
+
+.login-container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  min-width: 580px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+input, button{
+  margin-bottom: 1.5rem;
+  border-radius: 3px;
+  background: transparent;
+  padding: 0.25rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+button{
+  background: indianred;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* dashboard styles */
+
+.dashboard{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.dash-nav{
+  background: #fff;
+  grid-column: span 1/3;
+  grid-row: span 1/2;
+}
+
+.dash-sidebar{
+  background: cornflowerblue;
+  grid-column: span 1;
+  grid-row: span 2/3;
+}
+
+.dash-display{
+  background: cadetblue;
+  grid-column: span 2/3;
+}
