@@ -1,0 +1,39 @@
+[{
+        "icon": "swirl",
+        "url": "chat",
+        "heading": ""
+    },
+    {
+        "icon": "link",
+        "url": "chat-template"
+    },
+    {
+        "icon": "talk",
+        "url": "chat-template"
+    },
+    {
+        "icon": "create",
+        "url": "chat-template"
+    },
+    {
+        "icon": "email",
+        "url": "chat-template"
+    },
+    {
+        "icon": "phone",
+        "url": "chat-template"
+    },
+    {
+        "icon": "plug",
+        "url": "chat-template"
+    },
+    {
+        "icon": "photo",
+        "url": "chat-template"
+    },
+    {
+        "icon": "shield",
+        "url": "chat-template"
+    }
+
+]
