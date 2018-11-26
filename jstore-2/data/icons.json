@@ -1,0 +1,62 @@
+[{
+        "icon": "swirl",
+        "url": "swirl",
+        "id": 1
+    },
+    {
+        "icon": "link",
+        "url": "link",
+        "id": 2
+    },
+    {
+        "icon": "talk",
+        "url": "chat",
+        "id": 3
+    },
+    {
+        "icon": "create",
+        "url": "create",
+        "id": 4
+    },
+    {
+        "icon": "email",
+        "url": "email",
+        "id": 5
+    },
+    {
+        "icon": "phone",
+        "url": "contacts",
+        "id": 6
+    },
+    {
+        "icon": "plug",
+        "url": "plugins",
+        "id": 7
+    },
+    {
+        "icon": "photo",
+        "url": "photos",
+        "id": 8
+    },
+    {
+        "icon": "shield",
+        "url": "security",
+        "id": 9
+    },
+    {
+        "icon": "calendar",
+        "url": "calendar",
+        "id": 10
+    },
+    {
+        "icon": "information",
+        "url": "info",
+        "id": 11
+    },
+    {
+        "icon": "like",
+        "url": "security",
+        "id": 12
+    }
+
+]
