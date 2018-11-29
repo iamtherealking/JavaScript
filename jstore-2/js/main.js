@@ -28,7 +28,7 @@ $("document").ready(function(){
         data.forEach((icon,index)=>{
             const $newIcon = $iconTemplate.clone();
             const $iconURL = "img/" + icon.icon + ".svg";
-            $newIcon.addClass('app-icon').attr('src', $iconURL).attr('data-key', index);
+            $newIcon.addClass('app-icon').attr('src', $iconURL).attr('data-key', index).addClass('hi');
             $newIcon.click(function(e){
                 console.log($(e.target).attr('data-key'))
             })
