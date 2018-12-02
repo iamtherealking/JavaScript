@@ -5,11 +5,16 @@ $(document).ready(function(){
     const $home = $('#menu ul.pure-menu-list li:first-of-type');
 
     $friends.click(function(e){
+        if($(".content").empty()){
         $.getJSON('friends/friends.json', function(data){
             displayFriends(data)
         })
         $friends.addClass("pure-menu-selected");
         $home.removeClass("pure-menu-selected");
+        }
+        else{
+            $(".content").empty();
+        }
     })
 
     $home.click(function(e){
@@ -40,6 +45,22 @@ $(document).ready(function(){
     function displayMoreAboutFriend(number)
     {
         $(".content").empty();
+        const $friendInformationContainer = $(".content").append('<div class="friend"> <div class="identity"> <img src="" class="photo" /> <h2 class="name"></h2> <ul> <li><span class="label">email: </span></li> <li><span class="label">hometown: </span></li> </ul> </div> <p class="bio"> </p> </div>');
+        const $friendImg = $(".identity img");
+        const $friendName = $(".identity h2");
+        const $friendEmail = $(".identity ul li:first-of-type");
+        const $friendHometown = $(".identity ul li:last-of-type");
+        const $friendBio = $(".friend p");
+
+        const $friendData = "friends/" + number + ".json";
+
+        $.getJSON($friendData, function(data){
+            $friendImg.attr("src","img/" + data.avatar);
+            $friendName.append(data.firstName + " " + data.lastName);
+            $friendEmail.append(data.email);
+            $friendHometown.append(data.hometown);
+            $friendBio.append(data.bio);
+        })
     }
 
 })

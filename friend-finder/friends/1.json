@@ -2,5 +2,8 @@
     "id": 1,
     "firstName": "Jane",
     "lastName": "Doe",
-    "avatar": "jane_doe.jpg"
+    "avatar": "jane_doe.jpg",
+    "bio": "Lorem ipsum dolor amet fingerstache stumptown health goth typewriter cornhole. Slow-carb adaptogen letterpress, drinking vinegar distillery deep v fingerstache af gluten-free mustache swag typewriter put a bird on it chambray vexillologist. Stumptown umami tbh asymmetrical kale chips small batch waistcoat. Green juice air plant fashion axe, single-origin coffee tumeric whatever pitchfork cronut ramps try-hard tbh celiac. Enamel pin iceland locavore, seitan squid chia schlitz 8-bit bushwick echo park disrupt selfies put a bird on it. Ramps ugh af fashion axe.",
+    "email": "janedoe@aol.com",
+    "hometown": "Edmonton, Alberta"
 }
