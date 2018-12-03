@@ -1,5 +1,4 @@
 // Your code here...
-
 $(document).ready(function(){
     const $friends = $('#menu ul.pure-menu-list li:last-of-type');
     const $home = $('#menu ul.pure-menu-list li:first-of-type');
